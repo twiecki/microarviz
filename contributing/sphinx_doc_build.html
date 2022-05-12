@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Building the documentation &#8212; ArviZ dev documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Running the benchmark suite" href="running_benchmarks.html" />
+    <link rel="prev" title="Pull request step-by-step" href="pr_tutorial.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W1G68W77YV"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-W1G68W77YV');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+    dev
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Example Gallery
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../community.html">
+  Community
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Contributing
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://www.arviz.org">About<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/arviz-devs/arviz" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/arviz_devs" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+  
+    
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contribution types overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="issue_reports.html">
+   Issue reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="issue_triaging.html">
+   Issue Triaging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="outreach.html">
+   Outreach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="review_prs.html">
+   Review PRs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing_prs.html">
+   Contributing code via pull requests
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pr_tutorial.html">
+   Pull request step-by-step
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  How-to guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Building the documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="running_benchmarks.html">
+   Running the benchmark suite
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pr_checklist.html">
+   Pull request checklist
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="architecture.html">
+   Library architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content_structure.html">
+   Documentation content structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstring style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="syntax_guide.html">
+   Written content formatting reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developing_in_docker.html">
+   Developing in Docker
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  In depth explanations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="doc_toolchain.html">
+   Documentation toolchain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diataxis_for_arviz.html">
+   Diátaxis for ArviZ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotting_backends.html">
+   Plotting backends
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+  
+
+
+          
+  
+    
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pull-request-checks">
+   Pull request checks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#previewing-doc-changes">
+   Previewing doc changes
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arviz-devs/arviz/edit/main/doc/source/contributing/sphinx_doc_build.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+              <div class="toc-item">
+                
+<div class="tocsection supportbutton">
+
+    <a href="https://numfocus.org/donate-to-arviz">
+      <i class="far fa-heart"></i> Support ArviZ
+    </a>
+</div>
+              </div>
+              
+            
+          </div>
+          
+  
+
+
+          
+  
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="building-the-documentation">
+<span id="sphinx-doc-build"></span><h1>Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">#</a></h1>
+<p>The preferred workflow for contributing to ArviZ is to fork
+the <a class="reference external" href="https://github.com/arviz-devs/arviz/">GitHub repository</a>,
+clone it to your local machine, and develop on a feature branch. For a detailed description of the recommended development process, see the step-by-step guide <a class="reference internal" href="pr_tutorial.html#pr-steps"><span class="std std-ref">here</span></a>.</p>
+<p>If you are using Docker, see <a class="reference internal" href="developing_in_docker.html#building-doc-with-docker"><span class="std std-ref">Building documentation with Docker</span></a>.</p>
+<section id="pull-request-checks">
+<h2>Pull request checks<a class="headerlink" href="#pull-request-checks" title="Permalink to this headline">#</a></h2>
+<p>Every PR has a list of checks that check if your changes follow the rules being followed by ArviZ docs.
+You can check why a specific test is failing by clicking the <code class="docutils literal notranslate"><span class="pre">Details</span></code> next to it. It will take you to errors and warning page. This page shows the details of errors, for example in case of docstrings:</p>
+<p><code class="docutils literal notranslate"><span class="pre">arviz/plots/pairplot.py:127:0:</span> <span class="pre">C0301:</span> <span class="pre">Line</span> <span class="pre">too</span> <span class="pre">long</span> <span class="pre">(142/100)</span> <span class="pre">(line-too-long)</span></code>.</p>
+<p>It means line 127 of the file <code class="docutils literal notranslate"><span class="pre">pairplot.py</span></code> is too long.
+For running tests locally, see the <a class="reference internal" href="pr_checklist.html#pr-checklist"><span class="std std-ref">Pull request checklist</span></a>.</p>
+</section>
+<section id="previewing-doc-changes">
+<span id="preview-change"></span><h2>Previewing doc changes<a class="headerlink" href="#previewing-doc-changes" title="Permalink to this headline">#</a></h2>
+<p>There is an easy way to check the preview of docs by opening a PR on GitHub. ArviZ uses <code class="docutils literal notranslate"><span class="pre">readthedocs</span></code> to automatically build the documentation.
+For previewing documentation changes, take the following steps:</p>
+<ol class="arabic">
+<li><p>Go to the checks of your PR. Wait for the <code class="docutils literal notranslate"><span class="pre">docs/readthedocs.org:arviz</span></code> to complete.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The green tick indicates that the given check has been built successfully.</p>
+</div>
+</li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Details</span></code> button next to it.</p></li>
+<li><p>It will take you to the preview of ArviZ docs of your PR.</p></li>
+<li><p>Go to the webpage of the file you are working on.</p></li>
+<li><p>Check the preview of your changes on that page.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note
+The preview version of ArviZ docs will have a warning box that says “This page was created from a pull request (#Your PR number).” It shows the PR number whose changes have been implemented.</p>
+</div>
+<p>For example, a warning box will look like this:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page was created from a pull request (#PR Number).</p>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="pr_tutorial.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Pull request step-by-step</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="running_benchmarks.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Running the benchmark suite</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+  
+
+
+      </div>
+    </div>
+
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+<script>
+  $(document).ready(function () {
+    const content = $('<div class="alert-danger">ArviZ docs will now be available at <a href="https://python.arviz.org">python.arviz.org</a>!</div>')
+    $('#banner').append(content);
+  })
+</script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2018, ArviZ devs.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

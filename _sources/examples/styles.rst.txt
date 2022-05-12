@@ -1,0 +1,21 @@
+
+.. _example_styles:
+
+
+Matplotlib styles
+=================
+
+
+
+**API documentation:** No API Documentation available
+
+.. tab-set::
+    .. tab-item:: Matplotlib
+
+        .. image:: matplotlib/_images/mpl_styles.png
+
+        **Python source code:** :download:`[download source: matplotlib/mpl_styles.py]<matplotlib/mpl_styles.py>`
+
+        .. literalinclude:: matplotlib/mpl_styles.py
+            :lines: 8-
+

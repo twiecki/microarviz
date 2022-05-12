@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Docstring style &#8212; ArviZ dev documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Written content formatting reference" href="syntax_guide.html" />
+    <link rel="prev" title="Documentation content structure" href="content_structure.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W1G68W77YV"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-W1G68W77YV');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+    dev
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started/index.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  Example Gallery
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../community.html">
+  Community
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Contributing
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://www.arviz.org">About<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/arviz-devs/arviz" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/arviz_devs" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+  
+    
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contribution types overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="issue_reports.html">
+   Issue reports
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="issue_triaging.html">
+   Issue Triaging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="outreach.html">
+   Outreach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="review_prs.html">
+   Review PRs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing_prs.html">
+   Contributing code via pull requests
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pr_tutorial.html">
+   Pull request step-by-step
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  How-to guides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sphinx_doc_build.html">
+   Building the documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="running_benchmarks.html">
+   Running the benchmark suite
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pr_checklist.html">
+   Pull request checklist
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="architecture.html">
+   Library architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content_structure.html">
+   Documentation content structure
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Docstring style
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="syntax_guide.html">
+   Written content formatting reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developing_in_docker.html">
+   Developing in Docker
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  In depth explanations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="doc_toolchain.html">
+   Documentation toolchain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diataxis_for_arviz.html">
+   Diátaxis for ArviZ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plotting_backends.html">
+   Plotting backends
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+  
+
+
+          
+  
+    
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#see-also">
+   See Also
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kwargs-parameters">
+   Kwargs parameters
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arviz-devs/arviz/edit/main/doc/source/contributing/docstrings.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              </div>
+              
+              <div class="toc-item">
+                
+<div class="tocsection supportbutton">
+
+    <a href="https://numfocus.org/donate-to-arviz">
+      <i class="far fa-heart"></i> Support ArviZ
+    </a>
+</div>
+              </div>
+              
+            
+          </div>
+          
+  
+
+
+          
+  
+    
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="docstring-style">
+<span id="docstrings"></span><h1>Docstring style<a class="headerlink" href="#docstring-style" title="Permalink to this headline">#</a></h1>
+<p>Docstrings should follow the
+<a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">numpy docstring guide</a>. Read more about it <a class="reference internal" href="contributing_prs.html#docstring-formatting"><span class="std std-ref">Docstring formatting and type hints</span></a>.
+In ArviZ docs, docstrings consit of five main sections, i.e.,</p>
+<ol class="arabic simple">
+<li><p>Short summary</p></li>
+<li><p>Parameters</p></li>
+<li><p>Returns</p></li>
+<li><p>See Also</p></li>
+<li><p>Examples
+Extended summary is strongly encouraged and references is required when relevant in order to cite the papers proposing or explaining the algorithms that are implemented. All other sections can also be used when convenient.</p></li>
+</ol>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>While adding description of parameters, examples, etc, it is important to add references to external libraries and ArviZ.
+Docstrings follow the same guide for adding references as the other docs.
+For adding references to external libraries functions and objects, see <a class="reference internal" href="syntax_guide.html#reference-external-libs"><span class="std std-ref">Reference external libraries</span></a>. For referencing ArviZ objects, follow <a class="reference internal" href="syntax_guide.html#reference-arviz-objects"><span class="std std-ref">Referencing ArviZ objects</span></a>.</p>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">#</a></h2>
+<p>In ArviZ docs, we have a lot of interconnected functions both within the library and with external libraries and it can take a lot of time to search for the related functions. It is cruical to add the See Also section to save users time.
+For adding the <em>See Also</em> docstring section, you just need to add the function name. Sphinx will
+automatically add links to other ArviZ objects and functions listed in the <em>See Also</em>
+section.</p>
+<p>For example, let’s add <a class="reference internal" href="../api/generated/arviz.hdi.html#arviz.hdi" title="arviz.hdi"><code class="xref py py-func docutils literal notranslate"><span class="pre">hdi()</span></code></a> and <a class="reference internal" href="../api/generated/arviz.plot_ppc.html#arviz.plot_ppc" title="arviz.plot_ppc"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot_ppc()</span></code></a> in the <em>See Also</em> section.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">See</span> <span class="n">Also</span>
+    <span class="o">--------</span>
+    <span class="n">hdi</span> <span class="p">:</span> <span class="n">Calculate</span> <span class="n">highest</span> <span class="n">density</span> <span class="n">interval</span> <span class="p">(</span><span class="n">HDI</span><span class="p">)</span> <span class="n">of</span> <span class="n">array</span> <span class="k">for</span> <span class="n">given</span> <span class="n">probability</span><span class="o">.</span>
+    <span class="n">plot_ppc</span> <span class="p">:</span> <span class="n">plot</span> <span class="k">for</span> <span class="n">posterior</span><span class="o">/</span><span class="n">prior</span> <span class="n">predictive</span> <span class="n">checks</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="kwargs-parameters">
+<h2>Kwargs parameters<a class="headerlink" href="#kwargs-parameters" title="Permalink to this headline">#</a></h2>
+<p>All the kwargs parameters in <a class="reference internal" href="../api/plots.html#plot-api"><span class="std std-ref">plots</span></a> modules are passed to the matplotlib or bokeh functions. While writing their description, the functions to which they are being passed must be mentioned. In order to check or add those functions, the process is the same for all the kwargs arguments. Let’s read the step-by-step guide for <code class="docutils literal notranslate"><span class="pre">backend_kwargs</span></code> as an example, <a class="reference external" href="https://github.com/arviz-devs/arviz/wiki/ArviZ-Hacktoberfest-2021">here</a>.</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="content_structure.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Documentation content structure</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="syntax_guide.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Written content formatting reference</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+  
+
+
+      </div>
+    </div>
+
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+<script>
+  $(document).ready(function () {
+    const content = $('<div class="alert-danger">ArviZ docs will now be available at <a href="https://python.arviz.org">python.arviz.org</a>!</div>')
+    $('#banner').append(content);
+  })
+</script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2018, ArviZ devs.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
